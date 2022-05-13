@@ -4,6 +4,7 @@ import 'package:koa_health_assignment/src/domain/model/thought.dart';
 import 'package:koa_health_assignment/src/presentation/widgets/thought_detail_widgets.dart';
 
 
+
 class ThoughtDetailPage extends StatelessWidget {
 
   @override
@@ -13,7 +14,7 @@ class ThoughtDetailPage extends StatelessWidget {
     
     return Scaffold(
       appBar: AppBar(
-        title: Text('Game Detail'),
+        title: Text('Thought Detail'),
         centerTitle: true,
       ),
       body: SingleChildScrollView(

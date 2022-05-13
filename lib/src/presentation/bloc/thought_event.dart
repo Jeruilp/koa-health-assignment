@@ -8,6 +8,10 @@ class OnLoadThoughtEvent extends ThoughtEvent {
   OnLoadThoughtEvent(this.thoughts);
 }
 
+class AddThoughtEvent extends ThoughtEvent {
+  final Thought thought;
+  AddThoughtEvent(this.thought);
+}
 class LoadingThoughtEvent extends ThoughtEvent {
   
 }

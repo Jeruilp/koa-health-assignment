@@ -14,30 +14,38 @@ class ThoughtDetailBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+      padding: EdgeInsets.fromLTRB(40, 40, 40, 20),
       child: Column(
         mainAxisAlignment : MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Text(
-            thought.description,
-            overflow : TextOverflow.ellipsis,
+            thought.title,
+            textAlign: TextAlign.center,
             style: TextStyle(
               color     : Colors.black,
               fontWeight: FontWeight.bold,
-              fontSize  : 24.0,
+              fontSize  : 26.0,
             )
           ),
-          SizedBox( height: 20.0 ),
+          SizedBox( height: 40.0 ),
           Text(
             thought.description,
-            // overflow : TextOverflow.ellipsis,
             textAlign: TextAlign.justify,
             style: TextStyle(
               color   : Colors.black87,
-              fontSize: 14.0
+              fontSize: 22.0
             )
-          )
+          ),
+          SizedBox( height: 40.0 ),
+          Text(
+            'Your mood was: ${thought.mood}',
+            style: TextStyle(
+              color     : Colors.black,
+              fontWeight: FontWeight.bold,
+              fontSize  : 18.0,
+            )
+          ),
         ],
       ),
     );

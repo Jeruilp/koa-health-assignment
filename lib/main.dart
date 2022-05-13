@@ -32,11 +32,11 @@ class MyApp extends StatelessWidget {
         initialRoute: 'thoughts',
         routes: {
          'thoughts'       : (_) => ThoughtPage(),
-        //  'thoughts_detail': (_) => ThoughtDetailPage()
+         'thought_detail' : (_) => ThoughtDetailPage()
         },
         theme: ThemeData.light().copyWith(
           appBarTheme: AppBarTheme(
-            color: Colors.pink.withOpacity(0.7)
+            color: Colors.pink.withOpacity(0.5)
           )
         ),
       )

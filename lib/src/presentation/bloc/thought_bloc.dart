@@ -14,6 +14,11 @@ class ThoughtBloc extends Bloc<ThoughtEvent, ThoughtState> {
       emit( ThoughtSetState( event.thoughts ));
     });
 
+    on<AddThoughtEvent>((event, emit) {
+      final thoughts = [...state.thoughtList, event.thought];
+      emit( ThoughtSetState( thoughts ));
+    });
+
     on<LoadingThoughtEvent>( (event, emit) {
       emit( ThoughtLoadingState());
     });
