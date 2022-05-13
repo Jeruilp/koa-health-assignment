@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
+import 'src/presentation/bloc/thought_bloc.dart';
 import 'package:koa_health_assignment/src/presentation/pages/pages.dart';
+
 
 void main() {
   runApp(MyApp());
@@ -14,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        // BlocProvider(create: (_) => ThoughtBloc())
+        BlocProvider(create: (_) => ThoughtBloc())
       ],
       child: MaterialApp(
         localizationsDelegates: [ 
@@ -30,7 +32,7 @@ class MyApp extends StatelessWidget {
         initialRoute: 'thoughts',
         routes: {
          'thoughts'       : (_) => ThoughtPage(),
-         'thoughts_detail': (_) => ThoughtDetailPage()
+        //  'thoughts_detail': (_) => ThoughtDetailPage()
         },
         theme: ThemeData.light().copyWith(
           appBarTheme: AppBarTheme(
